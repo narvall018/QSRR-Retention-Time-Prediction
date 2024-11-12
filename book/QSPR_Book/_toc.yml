@@ -1,0 +1,12 @@
+format: jb-book
+root: intro
+chapters:
+  - file: material_methods/index
+  - file: material_methods/1_dataset
+  - file: material_methods/2_descriptorss
+  - file: material_methods/3_feature_selection
+  - file: material_methods/4_models
+  - file: results_model/1_unsupervised
+  - file: results_model/2_supervised
+  - file : conclusion
+  - file: references

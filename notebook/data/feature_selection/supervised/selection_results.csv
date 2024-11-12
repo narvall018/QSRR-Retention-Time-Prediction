@@ -1,0 +1,7 @@
+Dataset,Initial,LASSO_selected,RF_selected,Boruta_selected
+RDKit 2D,139,35,35,11
+ECFP,893,74,91,17
+MACCS,128,32,32,15
+MQN,33,8,8,6
+Mordred 2D/3D,731,64,91,34
+Combined,1833,91,91,35

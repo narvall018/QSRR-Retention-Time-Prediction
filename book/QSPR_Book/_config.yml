@@ -1,0 +1,28 @@
+# Book settings
+title: Modèle QSPR pour la prédiction des temps de rétention
+author: Votre Nom
+copyright: "2024"
+logo: ""
+
+# Force re-execution of notebooks on each build
+execute:
+  execute_notebooks: force
+
+# # Information about where the book exists on the web
+# repository:
+#   url: https://github.com/votre-username/QSPR_Book  # Facultatif, à modifier selon votre cas
+
+bibtex_bibfiles:
+    - references.bib
+sphinx:
+  config:
+    bibtex_reference_style: author_year  
+
+
+# Hide code options
+hide_code:
+  enabled: true           # Active l'option de masquage du code
+  show_on_load: false     # Définit les cellules de code comme masquées par défaut
+  hide_code:
+  enabled: true
+  show_on_load: false
