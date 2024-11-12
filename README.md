@@ -55,11 +55,12 @@ Distribution of descriptors:
 Computing molecular descriptors...
 100%|████████████████████████████████████| 3/3 [00:00<00:00, 336.66it/s]
 
-  Original_SMILES                    Canonical_SMILES         Predicted_RT
-0  CC(=O)OC1=CC=CC=C1C(=O)O         CC(=O)Oc1ccccc1C(=O)O    9.26
-1  CN1C=NC2=C1C(=O)N(C(=O)N2C)C     Cn1c(=O)c2c(ncn2C)n(C)   5.08
-2  CC1=CC=C(C=C1)C2=CC(=NN2C3=...   Cc1ccc(-c2cc(C(F)(F)...  10.33
 
+| Index | Original_SMILES | Canonical_SMILES | Predicted_RT |
+|-------|----------------|------------------|--------------|
+| 0 | CC(=O)OC1=CC=CC=C1C(=O)O | CC(=O)Oc1ccccc1C(=O)O | 9.26 |
+| 1 | CN1C=NC2=C1C(=O)N(C(=O)N2C)C | Cn1c(=O)c2c(ncn2C)n(C) | 5.08 |
+| 2 | CC1=CC=C(C=C1)C2=CC(=NN2C3=... | Cc1ccc(-c2cc(C(F)(F)... | 10.33 |
 
 ## 🧬 Molecular Descriptors
 
