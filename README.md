@@ -1,86 +1,91 @@
-# QSRR-Retention-Time-Prediction
+# QSRR-Retention-Time-Prediction 🔬
 
-QSRR model development for retention time prediction in liquid chromatography.
-## Documentation
+> QSRR model for predicting retention times in liquid chromatography.
 
-Read the results of the QSRR model created : [https://narvall018.github.io/QSRR-Retention-Time-Prediction](https://narvall018.github.io/QSRR-Retention-Time-Prediction)
+[![Python Version](https://img.shields.io/badge/python-3.6%2B-blue)]()
+[![License](https://img.shields.io/badge/license-MIT-green.svg)]()
 
-## Installation
+## 📖 Documentation 
 
-```bash
+Detailed documentation available at: [https://narvall018.github.io/QSRR-Retention-Time-Prediction](https://narvall018.github.io/QSRR-Retention-Time-Prediction)
+
+## 🚀 Installation
+
 pip install git+https://github.com/narvall018/QSRR-Retention-Time-Prediction.git
-```
 
-## Example Usage and Results
+### Dependencies
+- RDKit
+- NumPy  
+- Pandas
+- scikit-learn
+- joblib
+- tqdm
+
+## 💡 Usage
 
 ```python
 from qsrr_predictor import RTPredictor
 
-# List of SMILES to predict
+# Example molecules
 smiles_test = [
-    "CC(=O)OC1=CC=CC=C1C(=O)O",  # Aspirine
-    "CC1=CC=C(C=C1)C2=CC(=NN2C3=CC=C(C=C3)S(=O)(=O)N)C(F)(F)F",  # Celecoxib
-    "CN1C=NC2=C1C(=O)N(C(=O)N2C)C"  # Caféine
+   "CC(=O)OC1=CC=CC=C1C(=O)O",         # Aspirin
+   "CN1C=NC2=C1C(=O)N(C(=O)N2C)C",     # Caffeine
+   "CC1=CC=C(C=C1)C2=CC(=NN2C3=CC=C(C=C3)S(=O)(=O)N)C(F)(F)F"  # Celecoxib
 ]
 
 # Initialize and predict
 predictor = RTPredictor()
 results = predictor.predict(smiles_test)
-```
+print(results)
 
-### Output:
-
-```
-Nombre de features sélectionnées: 91
-Répartition des descripteurs:
+# Example output:
+Initialization successful!
+Number of selected features: 91
+Distribution of descriptors:
 - ECFP: 47
 - MACCS: 6
 - MQN: 1
 - RDKit: 37
 
-Conversion des SMILES en molécules...
-100%|███████████████████████████████████████████| 3/3 [00:00<00:00, 1959.65it/s]
+Computing molecular descriptors...
+100%|████████████████████████████████████| 3/3 [00:00<00:00, 336.66it/s]
 
-Calcul des descripteurs...
-100%|███████████████████████████████████████████| 3/3 [00:00<00:00, 2950.96it/s]
+  Original_SMILES                    Canonical_SMILES         Predicted_RT
+0  CC(=O)OC1=CC=CC=C1C(=O)O         CC(=O)Oc1ccccc1C(=O)O    9.26
+1  CN1C=NC2=C1C(=O)N(C(=O)N2C)C     Cn1c(=O)c2c(ncn2C)n(C)   5.08
+2  CC1=CC=C(C=C1)C2=CC(=NN2C3=...   Cc1ccc(-c2cc(C(F)(F)...  10.33
 
-Résultats des prédictions:
-                                     Original_SMILES                                    Canonical_SMILES  Predicted_RT
-0                       CC(=O)OC1=CC=CC=C1C(=O)O                          CC(=O)Oc1ccccc1C(=O)O      9.322365
-1  CC1=CC=C(C=C1)C2=CC(=NN2C3=CC=C(C=C3)S(=O)... Cc1ccc(-c2cc(C(F)(F)F)nn2-c2ccc(S(N)(=O)=O)...     10.266563
-2                   CN1C=NC2=C1C(=O)N(C(=O)N2C)C                     Cn1c(=O)c2c(ncn2C)n(C)c1=O      4.982333
-```
 
-### Results Explanation:
+## 🧬 Molecular Descriptors
 
-The model predicts retention times in minutes for each input molecule:
-- Aspirin: 9.32 minutes
-- Celecoxib: 10.27 minutes
-- Caffeine: 4.98 minutes
+The model uses four types of descriptors:
 
-The output includes:
-1. Original SMILES input
-2. Canonical SMILES (standardized format)
-3. Predicted retention time in minutes
+| Type | Description | Count |
+|------|-------------|-------|
+| ECFP | Circular molecular fingerprints (radius 3) | 47 |
+| MACCS | Predefined structural keys | 6 |
+| MQN | Atom/bond based descriptors | 1 |
+| RDKit | Physicochemical properties | 37 |
 
-## Model Features
+## 📊 Results Format
 
-The predictor uses multiple types of molecular descriptors:
-- ECFP (Extended-Connectivity Fingerprints): 47 features
-- MACCS keys: 6 features
-- MQN descriptors: 1 feature
-- RDKit descriptors: 37 features
+The output DataFrame contains:
+- Original_SMILES: Input SMILES
+- Canonical_SMILES: Standardized SMILES
+- Predicted_RT: Predicted retention time (minutes)
 
-## Try Your Own Molecules
+## ⚠️ Important Notes
 
-You can predict retention times for your own molecules by providing SMILES strings:
+1. Ensure input SMILES are valid
+2. Predictions are optimal for molecules similar to the training set
+3. Times are based on specific chromatographic conditions
 
-```python
-your_smiles = [
-    "CC(=O)NC1=CC=C(O)C=C1"  # Paracetamol
-]
+## 📫 Support & Contact
 
-predictor = RTPredictor()
-results = predictor.predict(your_smiles)
-print(results)
-```
+For any questions or issues:
+- Open an issue on GitHub
+- Check the [documentation](https://narvall018.github.io/QSRR-Retention-Time-Prediction)
+
+## 📄 License
+
+This project is licensed under MIT - see the [LICENSE](LICENSE) file for details.
