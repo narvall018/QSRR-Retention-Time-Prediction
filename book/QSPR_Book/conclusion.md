@@ -8,3 +8,5 @@ This study developed a QSRR model for retention time prediction in reversed-phas
 The Jupyter notebooks used to generate the results in this study are available at the following link: [https://github.com/narvall018/QSRR-Retention-Time-Prediction/tree/main/notebook](https://github.com/narvall018/QSRR-Retention-Time-Prediction/tree/main/notebook).
 
 The data utilized for model training and testing can be found in the `data` folder, and the final model is saved in the `models` folder within the same repository.
+
+
