@@ -11,8 +11,18 @@ Detailed documentation available at: [https://narvall018.github.io/QSRR-Retentio
 
 ## 🚀 Installation
 
+
+Direct installation :
 ```bash
-pip install git+https://github.com/narvall018/QSRR-Retention-Time-Prediction.git
+# Clone the repository
+git clone https://github.com/narvall018/QSRR-Retention-Time-Prediction.git
+cd QSRR-Retention-Time-Prediction
+
+# Install requirements
+pip install -r requirements.txt
+
+# Install package
+pip install .
 ```
 
 ### Dependencies
