@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Dataset description &#8212; Modèle QSPR pour la prédiction des temps de rétention</title>
+    <title>Dataset description &#8212; QSRR retention time prediction</title>
   
   
   
@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Molecular descriptors computation" href="2_descriptorss.html" />
-    <link rel="prev" title="Materials and Methods" href="index.html" />
+    <link rel="prev" title="Materials and methods" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -138,7 +138,7 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
-    <p class="title logo__title">Modèle QSPR pour la prédiction des temps de rétention</p>
+    <p class="title logo__title">QSRR retention time prediction</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -152,13 +152,13 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="index.html">Materials and Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Materials and methods</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Dataset description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="2_descriptorss.html">Molecular descriptors computation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3_feature_selection.html">Feature selection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="4_models.html">Model development and evaluation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../results_model/1_unsupervised.html">Unsupervised Feature Selection Results</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../results_model/2_supervised.html">Supervised Feature Selection Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../results_model/1_unsupervised.html">Unsupervised feature selection results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../results_model/2_supervised.html">Supervised feature selection results</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../conclusion.html">Conclusion</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
@@ -322,23 +322,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="ne">----&gt; </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">rdkit</span> <span class="kn">import</span> <span class="n">Chem</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">from</span> <span class="nn">rdkit.Chem</span> <span class="kn">import</span> <span class="n">Descriptors</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">import</span> <span class="nn">rdkit</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;rdkit&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<section class="tex2jax_ignore mathjax_ignore" id="dataset-description">
+  <section class="tex2jax_ignore mathjax_ignore" id="dataset-description">
 <h1>Dataset description<a class="headerlink" href="#dataset-description" title="Permalink to this heading">#</a></h1>
 <section id="experimental-data-overview">
 <h2>Experimental data overview<a class="headerlink" href="#experimental-data-overview" title="Permalink to this heading">#</a></h2>
@@ -371,63 +355,63 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>Metolachlor-ESA</td>
-      <td>7.8660</td>
-      <td>CCc1cccc(C)c1N(C(=O)CS(=O)(=O)O)[C@H](C)COC</td>
+      <td>10-Hydroxycarbamazepine</td>
+      <td>6.7890</td>
+      <td>N=C(O)N1c2ccccc2CC(O)c2ccccc21</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Spinosad A</td>
-      <td>13.7730</td>
-      <td>CCC1CCCC(OC2CCC(N(C)C)C(C)O2)[C@@H](C)C(=O)C2=...</td>
+      <td>Citalopram</td>
+      <td>8.7150</td>
+      <td>CN(C)CCC[C@@]1(c2ccc(F)cc2)OCc2cc(C#N)ccc21</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>4-Hydroxyphenylacetamide</td>
-      <td>2.3010</td>
-      <td>N=C(O)Cc1ccc(O)cc1</td>
+      <td>Tebuconazole</td>
+      <td>13.3800</td>
+      <td>CC(C)(C)C(O)(CCc1ccc(Cl)cc1)Cn1cncn1</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Atrazine-d5</td>
-      <td>9.5900</td>
-      <td>CCN=c1nc(Cl)[nH]c(=NC(C)C)[nH]1</td>
+      <td>Simazine-2-OH</td>
+      <td>3.5810</td>
+      <td>CCN=c1nc(O)[nH]c(=NCC)[nH]1</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>Sulfamethoxazole</td>
-      <td>5.9780</td>
-      <td>Cc1cc(NS(=O)(=O)c2ccc(N)cc2)no1</td>
+      <td>4-Androstene-3,17-dione</td>
+      <td>11.6465</td>
+      <td>C[C@]12CC[C@H]3[C@@H](CCC4=CC(=O)CC[C@@]43C)[C...</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>MIT</td>
-      <td>1.4850</td>
-      <td>Cn1sccc1=O</td>
+      <td>Dimethyl phthalate</td>
+      <td>8.5390</td>
+      <td>COC(=O)c1ccccc1C(=O)OC</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>Atrazine-desisopropyl</td>
-      <td>4.3750</td>
-      <td>CCN=c1[nH]c(Cl)nc(=N)[nH]1</td>
+      <td>Nicotine-d4</td>
+      <td>0.9510</td>
+      <td>[2H]c1nc([2H])c(C2CCCN2C)c([2H])c1[2H]</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>Monuron</td>
-      <td>7.9955</td>
-      <td>CN(C)C(=O)Nc1ccc(Cl)cc1</td>
+      <td>Acetamiprid</td>
+      <td>6.3625</td>
+      <td>C/C(=N\C#N)N(C)Cc1ccc(Cl)nc1</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>Ranitidine S-Oxide</td>
-      <td>1.1550</td>
-      <td>CN/C(=C\[N+](=O)[O-])NCCS(=O)Cc1ccc(CN(C)C)o1</td>
+      <td>Haloperidol-d4</td>
+      <td>8.9055</td>
+      <td>[2H]c1c([2H])c(C2(O)CCN(CCCC(=O)c3ccc(F)cc3)CC...</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>DCOIT</td>
-      <td>17.2150</td>
-      <td>CCCCCCCCn1sc(Cl)c(Cl)c1=O</td>
+      <td>Atrazine-desisopropyl-2-OH</td>
+      <td>0.8930</td>
+      <td>CCN=c1[nH]c(O)nc(=N)[nH]1</td>
     </tr>
   </tbody>
 </table>
@@ -570,7 +554,7 @@ document.write(`
 <p>The training dataset contains retention times measured under reversed-phase liquid chromatography conditions. The retention times span from 0.555 to 23.842 minutes, with a median value of 8.318 minutes. The distribution exhibits a standard deviation of 4.729 minutes and a skewness of 0.490.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="../_images/a41937e94f5decf967e4fbf4083eff0d39d9cf305168b3a24fa3bcead5a09801.png" src="../_images/a41937e94f5decf967e4fbf4083eff0d39d9cf305168b3a24fa3bcead5a09801.png" />
+<img alt="../_images/f428b7f7cae514f7588d9e0610930de0d0272081619b3f6e989470fd9f3e0333.png" src="../_images/f428b7f7cae514f7588d9e0610930de0d0272081619b3f6e989470fd9f3e0333.png" />
 </div>
 </div>
 <p>The boxplot reveals the distribution of retention times in the training set. The first quartile occurs at 5 minutes, while the third quartile extends to 10 minutes. Two distinct retention time regions emerge: early-eluting compounds before 5 minutes and late-eluting compounds after 15 minutes. One compound exhibits a retention time beyond 20 minutes, corresponding to the most hydrophobic molecule in the dataset.</p>
@@ -614,7 +598,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Materials and Methods</p>
+        <p class="prev-next-title">Materials and methods</p>
       </div>
     </a>
     <a class="right-next"
@@ -661,7 +645,7 @@ document.write(`
   <div class="footer-item">
     
 <p class="component-author">
-By Votre Nom
+By J. Sade
 </p>
 
   </div>

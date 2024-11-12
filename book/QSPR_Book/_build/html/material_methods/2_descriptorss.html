@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Molecular descriptors computation &#8212; Modèle QSPR pour la prédiction des temps de rétention</title>
+    <title>Molecular descriptors computation &#8212; QSRR retention time prediction</title>
   
   
   
@@ -138,7 +138,7 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
-    <p class="title logo__title">Modèle QSPR pour la prédiction des temps de rétention</p>
+    <p class="title logo__title">QSRR retention time prediction</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -152,13 +152,13 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="index.html">Materials and Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Materials and methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_dataset.html">Dataset description</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Molecular descriptors computation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3_feature_selection.html">Feature selection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="4_models.html">Model development and evaluation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../results_model/1_unsupervised.html">Unsupervised Feature Selection Results</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../results_model/2_supervised.html">Supervised Feature Selection Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../results_model/1_unsupervised.html">Unsupervised feature selection results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../results_model/2_supervised.html">Supervised feature selection results</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../conclusion.html">Conclusion</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
@@ -325,7 +325,7 @@ document.write(`
 <h1>Molecular descriptors computation<a class="headerlink" href="#molecular-descriptors-computation" title="Permalink to this heading">#</a></h1>
 <section id="id1">
 <h2>Molecular descriptors computation<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
-<p>The descriptor calculation process starts with SMILES canonicalization to ensure consistent molecular representation. The RDKit package computes 2D descriptors, ECFP6 fingerprints, and MACCS keys <span id="id2">[<a class="reference internal" href="../references.html#id17" title="Greg Landrum. Rdkit: open-source cheminformatics software. 2016. https://www.rdkit.org.">Landrum, 2016</a>]</span>. The 2D descriptors quantify topological and physicochemical properties, while ECFP6 fingerprints encode circular substructural patterns within a radius of 6 bonds <span id="id3">[<a class="reference internal" href="../references.html#id14" title="David Rogers and Mathew Hahn. Extended-connectivity fingerprints. Journal of Chemical Information and Modeling, 50(5):742–754, 2010.">Rogers and Hahn, 2010</a>]</span>. MACCS keys represent the presence or absence of 166 predefined structural patterns <span id="id4">[]</span>. Mordred calculates both 2D descriptors from molecular topology and 3D descriptors from molecular geometries <span id="id5">[]</span>. The 2D descriptors include connectivity indices and surface areas, while 3D descriptors capture spatial properties. The Molecular Quantum Numbers (MQN) characterize molecules through atom counts, bond types, and topological features. Each calculation method produces a numerical matrix where rows represent molecules and columns correspond to specific molecular features.</p>
+<p>The descriptor calculation process starts with SMILES canonicalization to ensure consistent molecular representation. The RDKit package computes 2D descriptors, ECFP6 fingerprints, and MACCS keys <span id="id2">[<a class="reference internal" href="../references.html#id16" title="Greg Landrum. Rdkit: open-source cheminformatics software. 2016. https://www.rdkit.org.">Landrum, 2016</a>]</span>. The 2D descriptors quantify topological and physicochemical properties, while ECFP6 fingerprints encode circular substructural patterns within a radius of 6 bonds <span id="id3">[<a class="reference internal" href="../references.html#id17" title="David Rogers and Mathew Hahn. Extended-connectivity fingerprints. Journal of Chemical Information and Modeling, 50(5):742–754, 2010.">Rogers and Hahn, 2010</a>]</span>. MACCS keys represent the presence or absence of 166 predefined structural patterns <span id="id4">[<a class="reference internal" href="../references.html#id18" title="John L. Durant, Beth A. Leland, David R. Henry, and James G. Nourse. Reoptimization of mdl keys for use in drug discovery. Journal of Chemical Information and Computer Sciences, 42(6):1273–1280, 2002.">Durant <em>et al.</em>, 2002</a>]</span>. Mordred calculates both 2D descriptors from molecular topology and 3D descriptors from molecular geometries <span id="id5">[<a class="reference internal" href="../references.html#id19" title="Hirotomo Moriwaki, Yoshiaki-Suigetsu Tian, Noriyuki Kawashita, and Toshihiro Takagi. Mordred: a molecular descriptor calculator. Journal of Cheminformatics, 10(1):4, 2018.">Moriwaki <em>et al.</em>, 2018</a>]</span>. The 2D descriptors include connectivity indices and surface areas, while 3D descriptors capture spatial properties. The Molecular Quantum Numbers (MQN) characterize molecules through atom counts, bond types, and topological features. Each calculation method produces a numerical matrix where rows represent molecules and columns correspond to specific molecular features.</p>
 </section>
 <section id="data-processing-and-descriptor-analysis">
 <h2>Data processing and descriptor analysis<a class="headerlink" href="#data-processing-and-descriptor-analysis" title="Permalink to this heading">#</a></h2>
@@ -420,7 +420,7 @@ document.write(`
   <div class="footer-item">
     
 <p class="component-author">
-By Votre Nom
+By J. Sade
 </p>
 
   </div>

@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Supervised Feature Selection Results &#8212; Modèle QSPR pour la prédiction des temps de rétention</title>
+    <title>Supervised feature selection results &#8212; QSRR retention time prediction</title>
   
   
   
@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Conclusion" href="../conclusion.html" />
-    <link rel="prev" title="Unsupervised Feature Selection Results" href="1_unsupervised.html" />
+    <link rel="prev" title="Unsupervised feature selection results" href="1_unsupervised.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -138,7 +138,7 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
-    <p class="title logo__title">Modèle QSPR pour la prédiction des temps de rétention</p>
+    <p class="title logo__title">QSRR retention time prediction</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -152,13 +152,13 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../material_methods/index.html">Materials and Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../material_methods/index.html">Materials and methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../material_methods/1_dataset.html">Dataset description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../material_methods/2_descriptorss.html">Molecular descriptors computation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../material_methods/3_feature_selection.html">Feature selection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../material_methods/4_models.html">Model development and evaluation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1_unsupervised.html">Unsupervised Feature Selection Results</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Supervised Feature Selection Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_unsupervised.html">Unsupervised feature selection results</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Supervised feature selection results</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../conclusion.html">Conclusion</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
@@ -298,7 +298,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Supervised Feature Selection Results</h1>
+    <h1>Supervised feature selection results</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -309,7 +309,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-comparaison">Model comparaison</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ridge-model-optimization">3. Ridge Model Optimization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ridge-model-optimization">3. Ridge model optimization</a></li>
 </ul>
             </nav>
         </div>
@@ -322,7 +322,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="supervised-feature-selection-results">
-<h1>Supervised Feature Selection Results<a class="headerlink" href="#supervised-feature-selection-results" title="Permalink to this heading">#</a></h1>
+<h1>Supervised feature selection results<a class="headerlink" href="#supervised-feature-selection-results" title="Permalink to this heading">#</a></h1>
 <section id="model-comparaison">
 <h2>Model comparaison<a class="headerlink" href="#model-comparaison" title="Permalink to this heading">#</a></h2>
 <p>The supervised feature selection methods demonstrate varying performance patterns across descriptor types and regression algorithms. The combined descriptor set with LASSO selection and Ridge regression achieved the highest performance, with R² scores of 0.941 for cross-validation and 0.882 for the test set.</p>
@@ -333,7 +333,7 @@ The 2D RDKit descriptors with LASSO selection (R² = 0.643) offered comparable p
 The LASSO selection method emerged as the most effective approach, consistently producing higher R² scores compared to Random Forest and Boruta selections. This suggests that the linear feature selection strategy of LASSO aligns well with the underlying relationship between molecular descriptors and retention times</p>
 </section>
 <section id="ridge-model-optimization">
-<h2>3. Ridge Model Optimization<a class="headerlink" href="#ridge-model-optimization" title="Permalink to this heading">#</a></h2>
+<h2>3. Ridge model optimization<a class="headerlink" href="#ridge-model-optimization" title="Permalink to this heading">#</a></h2>
 <p>The Ridge regression model underwent hyperparameter optimization through randomized search with 50 parameter combinations across 5-fold cross-validation. The optimal parameters (alpha = 0.0107, solver = ‘saga’, fit_intercept = True) yielded a cross-validation R² of 0.954 and a test set R² of 0.925, with RMSE of 0.830 minutes.</p>
 <p><img alt="Prediction Performance" src="../_images/predictions_vs_actual.png" />
 <em>Figure 3: Comparison of predicted versus actual retention times</em></p>
@@ -346,8 +346,7 @@ The LASSO selection method emerged as the most effective approach, consistently 
 <p>The residuals versus predictions plot shows no systematic patterns, indicating consistent model performance across the retention time range.</p>
 <p><img alt="Important Features" src="../_images/top_10_features.png" />
 <em>Figure 6: Ten most influential molecular descriptors</em></p>
-<p>The molecular descriptor analysis reveals key physicochemical properties governing chromatographic retention. MolLogP, the most influential descriptor, represents molecular lipophilicity, which determines compound interaction with the stationary phase in reversed-phase chromatography <span id="id1">[]</span>. The PEOE_VSA descriptors capture molecular surface properties affecting solute-stationary phase interactions. NHOHCount, quantifying hydrogen bond donors, reflects potential interactions with mobile phase components <span id="id2">[]</span>.</p>
-<p>Additional structural descriptors such as MACCS keys and topological features (GATS1dv, FpDensityMorgan1) encode molecular shape and connectivity patterns that influence retention behavior through steric effects and spatial arrangements <span id="id3">[]</span>.</p>
+<p>The molecular descriptor analysis reveals key physicochemical properties governing chromatographic retention. MolLogP, the most influential descriptor, represents molecular lipophilicity, which determines compound interaction with the stationary phase in reversed-phase chromatography. The PEOE_VSA descriptors capture molecular surface properties affecting solute-stationary phase interactions. NHOHCount, quantifying hydrogen bond donors, reflects potential interactions with mobile phase components. Additional structural descriptors such as MACCS keys and topological features (GATS1dv, FpDensityMorgan1) encode molecular shape and connectivity patterns that influence retention behavior through steric effects and spatial arrangements.</p>
 </section>
 </section>
 
@@ -388,7 +387,7 @@ The LASSO selection method emerged as the most effective approach, consistently 
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Unsupervised Feature Selection Results</p>
+        <p class="prev-next-title">Unsupervised feature selection results</p>
       </div>
     </a>
     <a class="right-next"
@@ -419,7 +418,7 @@ The LASSO selection method emerged as the most effective approach, consistently 
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-comparaison">Model comparaison</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ridge-model-optimization">3. Ridge Model Optimization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ridge-model-optimization">3. Ridge model optimization</a></li>
 </ul>
   </nav></div>
 
@@ -434,7 +433,7 @@ The LASSO selection method emerged as the most effective approach, consistently 
   <div class="footer-item">
     
 <p class="component-author">
-By Votre Nom
+By J. Sade
 </p>
 
   </div>

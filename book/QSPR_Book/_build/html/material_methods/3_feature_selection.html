@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Feature selection &#8212; Modèle QSPR pour la prédiction des temps de rétention</title>
+    <title>Feature selection &#8212; QSRR retention time prediction</title>
   
   
   
@@ -138,7 +138,7 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
-    <p class="title logo__title">Modèle QSPR pour la prédiction des temps de rétention</p>
+    <p class="title logo__title">QSRR retention time prediction</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -152,13 +152,13 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="index.html">Materials and Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Materials and methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1_dataset.html">Dataset description</a></li>
 <li class="toctree-l1"><a class="reference internal" href="2_descriptorss.html">Molecular descriptors computation</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Feature selection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="4_models.html">Model development and evaluation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../results_model/1_unsupervised.html">Unsupervised Feature Selection Results</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../results_model/2_supervised.html">Supervised Feature Selection Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../results_model/1_unsupervised.html">Unsupervised feature selection results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../results_model/2_supervised.html">Supervised feature selection results</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../conclusion.html">Conclusion</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
@@ -323,7 +323,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="feature-selection">
 <h1>Feature selection<a class="headerlink" href="#feature-selection" title="Permalink to this heading">#</a></h1>
-<p>Feature selection methods reduce data dimensionality to address overfitting and computational constraints in machine learning models <span id="id1">[]</span>. The high number of molecular descriptors can lead to the curse of dimensionality, where the model performance decreases as the number of features increases <span id="id2">[]</span>. Two approaches were applied to select relevant features. The unsupervised method, Principal Component Analysis (PCA), transforms the original descriptors into uncorrelated components. The supervised methods—LASSO, Random Forest importance, and Boruta—select features based on their correlation with retention times <span id="id3">[]</span>, <span id="id4">[]</span>.</p>
+<p>Feature selection methods reduce data dimensionality to address overfitting and computational constraints in machine learning models <span id="id1">[<a class="reference internal" href="../references.html#id20" title="Isabelle Guyon and André Elisseeff. An introduction to variable and feature selection. Journal of Machine Learning Research, 3:1157–1182, 2003.">Guyon and Elisseeff, 2003</a>]</span>. The high number of molecular descriptors can lead to the curse of dimensionality, where the model performance decreases as the number of features increases <span id="id2">[<a class="reference internal" href="../references.html#id21" title="George V. Trunk. A problem of dimensionality: a simple example. IEEE Transactions on Pattern Analysis and Machine Intelligence, PAMI-1(3):306–307, 1979.">Trunk, 1979</a>]</span>. Two approaches were applied to select relevant features. The unsupervised method, Principal Component Analysis (PCA), transforms the original descriptors into uncorrelated components. The supervised methods—LASSO, Random Forest importance, and Boruta—select features based on their correlation with retention times <span id="id3">[<a class="reference internal" href="../references.html#id22" title="Robert Tibshirani. Regression shrinkage and selection via the lasso. Journal of the Royal Statistical Society: Series B (Methodological), 58(1):267–288, 1996.">Tibshirani, 1996</a>]</span>, <span id="id4">[<a class="reference internal" href="../references.html#id23" title="Miron B. Kursa and Wojciech R. Rudnicki. Feature selection with the boruta package. Journal of Statistical Software, 36(11):1–13, 2010.">Kursa and Rudnicki, 2010</a>]</span>.</p>
 <section id="unsupervised-feature-selection">
 <h2>Unsupervised feature selection<a class="headerlink" href="#unsupervised-feature-selection" title="Permalink to this heading">#</a></h2>
 <p>The molecular descriptors contain redundant and correlated information. Principal Component Analysis (PCA) transforms these original descriptors into a new set of uncorrelated variables. This transformation provides two advantages for QSRR modeling: it removes correlations between descriptors and reduces the data dimensionality while preserving molecular information.
@@ -403,7 +403,7 @@ For each descriptor type (RDKit 2D, ECFP6, MACCS, MQN, and Mordred 2D/3D), the a
 </section>
 <section id="supervised-feature-selection">
 <h2>Supervised feature selection<a class="headerlink" href="#supervised-feature-selection" title="Permalink to this heading">#</a></h2>
-<p>Three supervised feature selection methods—LASSO regression, Random Forest, and Boruta—were applied to each preprocessed descriptor set. Each method implements a restriction to half the number of samples for the maximum number of selected features <span id="id5">[]</span>. The selection methods process the descriptors differently. LASSO bases selection on regression coefficients <span id="id6">[]</span>. Random Forest employs feature importance scores from mean decrease in impurity <span id="id7">[]</span>. The Boruta algorithm uses a statistical testing approach with randomized features <span id="id8">[]</span>.</p>
+<p>Three supervised feature selection methods—LASSO regression, Random Forest, and Boruta—were applied to each preprocessed descriptor set. Each method implements a restriction to half the number of samples for the maximum number of selected features <span id="id5">[<a class="reference internal" href="../references.html#id20" title="Isabelle Guyon and André Elisseeff. An introduction to variable and feature selection. Journal of Machine Learning Research, 3:1157–1182, 2003.">Guyon and Elisseeff, 2003</a>]</span>. The selection methods process the descriptors differently. LASSO bases selection on regression coefficients <span id="id6">[<a class="reference internal" href="../references.html#id22" title="Robert Tibshirani. Regression shrinkage and selection via the lasso. Journal of the Royal Statistical Society: Series B (Methodological), 58(1):267–288, 1996.">Tibshirani, 1996</a>]</span>. Random Forest employs feature importance scores from mean decrease in impurity <span id="id7">[]</span>. The Boruta algorithm uses a statistical testing approach with randomized features <span id="id8">[<a class="reference internal" href="../references.html#id23" title="Miron B. Kursa and Wojciech R. Rudnicki. Feature selection with the boruta package. Journal of Statistical Software, 36(11):1–13, 2010.">Kursa and Rudnicki, 2010</a>]</span>.</p>
 <p><img alt="RDKit2D Features" src="../_images/feature_importance_descriptors_2D.png" />
 <em>Figure 1: Top 10 features selected by each method for RDKit 2D descriptors</em></p>
 <p><img alt="ECFP Features" src="../_images/feature_importance_descriptors_ECFP.png" />
@@ -585,7 +585,7 @@ For each descriptor type (RDKit 2D, ECFP6, MACCS, MQN, and Mordred 2D/3D), the a
   <div class="footer-item">
     
 <p class="component-author">
-By Votre Nom
+By J. Sade
 </p>
 
   </div>
