@@ -11,7 +11,9 @@ Detailed documentation available at: [https://narvall018.github.io/QSRR-Retentio
 
 ## 🚀 Installation
 
+```bash
 pip install git+https://github.com/narvall018/QSRR-Retention-Time-Prediction.git
+```
 
 ### Dependencies
 - RDKit
@@ -22,6 +24,8 @@ pip install git+https://github.com/narvall018/QSRR-Retention-Time-Prediction.git
 - tqdm
 
 ## 💡 Usage
+
+Initialize the predictor
 
 ```python
 from qsrr_predictor import RTPredictor
@@ -37,6 +41,7 @@ smiles_test = [
 predictor = RTPredictor()
 results = predictor.predict(smiles_test)
 print(results)
+```
 
 # Example output:
 Initialization successful!
@@ -84,6 +89,7 @@ The output DataFrame contains:
 
 For any questions or issues:
 - Open an issue on GitHub
+- Contact me : julien.sade@u-pec.fr
 - Check the [documentation](https://narvall018.github.io/QSRR-Retention-Time-Prediction)
 
 ## 📄 License
