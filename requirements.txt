@@ -1,0 +1,6 @@
+pandas
+numpy
+rdkit
+scikit-learn>=0.24.0
+tqdm
+joblib
