@@ -162,3 +162,4 @@ cython_debug/
 #.idea/
 book/QSPR_Book/_build
 book/QSPR_Book/_build
+book/QSPR_Book/_build
