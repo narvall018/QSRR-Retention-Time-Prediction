@@ -38,7 +38,7 @@ pip install .
 Initialize the predictor
 
 ```python
-from qsrr_predictor import RTPredictor
+from QSRR_predictor import RTPredictor
 
 # Example molecules
 smiles_test = [
